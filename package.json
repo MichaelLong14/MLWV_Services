@@ -1,0 +1,19 @@
+{
+  "name": "MLWV_Services",
+  "version": "0.0.1",
+  "description": "The services tier for the Scoot application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Long, William Vuong",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^6.4.0",
+    "joi": "^4.6.2",
+    "lab": "^3.2.3",
+    "nipple": "^2.5.4",
+    "package": "^1.0.1",
+    "request": "^2.39.0"
+  }
+}
