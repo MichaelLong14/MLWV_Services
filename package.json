@@ -9,7 +9,9 @@
   "author": "Michael Long, William Vuong",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^1.0.19",
     "hapi": "^6.4.0",
+    "hapi-swagger": "^0.2.3",
     "joi": "^4.6.2",
     "lab": "^3.2.3",
     "nipple": "^2.5.4",
