@@ -19,6 +19,16 @@ var pack = require("package"),
   };
 
 var routeArray = [{
+  method: 'POST',
+  path: '/login',
+  config: {
+    handler: Handlers.loginHandler,
+    description: 'Login Route',
+    notes: 'Login Route',
+    tags: ['api']
+  } },
+
+  {
   method: 'GET',
   path: '/test',
   config: {
@@ -26,8 +36,26 @@ var routeArray = [{
     description: 'Default Route used for testing',
     notes: 'Default Route',
     tags: ['api']
-  }
-}]
+  } },
+
+  {
+  method: 'GET',
+  path: '/home',
+  config: {
+  	handler: {file: './assets/index.html'},
+  	description: 'Serve index.html'
+  } },
+
+  {
+  	//Not the best way to serve assets, but until we move to another solution
+    method: 'GET',
+    path: '/css/{param*}',
+    handler: {
+        directory: {
+            path: 'assets/css'
+        }
+    } }
+];
 
 server.route(routeArray);
 
