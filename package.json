@@ -16,7 +16,8 @@
     "lab": "^3.2.3",
     "nipple": "^2.5.4",
     "package": "^1.0.1",
-    "request": "^2.39.0"
+    "request": "^2.39.0",
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
