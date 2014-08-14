@@ -18,16 +18,40 @@ var pack = require("package"),
     apiVersion: pack.version
   };
 
-var routeArray = [{
-  method: 'GET',
-  path: '/test',
-  config: {
-    handler: Handlers.defaultHandler,
-    description: 'Default Route used for testing',
-    notes: 'Default Route',
-    tags: ['api']
-  }
-}]
+var routeArray = [
+	{
+		method: 'GET',
+		path: '/spots',
+		config: {
+			handler: Handlers.getOpenSpots,
+			description: 'Gets all of the open spots',
+			notes: 'Testing route, production routes will need to have limits (see firebase docs for limits',
+			tags: ['api']
+		}
+	},
+
+	{
+		method: 'POST',
+		path: '/spot',
+		config: {
+			handler: Handlers.createOpenSpot,
+			description: 'Gets all of the open spots',
+			notes: 'Testing route, production routes will need to have limits (see firebase docs for limits',
+			tags: ['api']
+		}
+	},
+	
+	{
+		method: 'DELETE',
+		path: '/spot/{id?}',
+		config: {
+			handler: Handlers.deleteOpenSpot,
+			description: 'Gets all of the open spots',
+			notes: 'Testing route, production routes will need to have limits (see firebase docs for limits',
+			tags: ['api']
+		}
+	},
+]
 
 server.route(routeArray);
 
