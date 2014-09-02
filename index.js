@@ -50,6 +50,16 @@ var routeArray = [{
 			tags: ['api']
 		}
 	},
+
+	{
+		method: 'GET',
+		path: '/spots/createSpots',
+		config: {
+			handler: Handlers.createSpots,
+			description: 'Creates spots from a master list for demo purposes',
+			notes: 'Demo Route'
+		}
+	}
 ]
 
 server.route(routeArray);
